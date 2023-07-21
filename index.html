@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Responsive Multipage Website</title>
+    <link rel="stylesheet" href="Css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    
+    <body>
+      <!-- Navbar Start -->
+      <header class="header" id="navigation-menu">
+        <div class="container">
+          <nav>
+            <a href="#" class="logo"> <img src="Images/logo.png" alt=""> </a>
+            <ul class="nav-menu">
+              <li> <a href="#home" class="nav-link">Home</a> </li>
+              <li> <a href="#about" class="nav-link">About</a> </li>
+              <li> <a href="#room" class="nav-link">Rooms</a> </li>
+              <li> <a href="contact.html" class="nav-link">Contact</a> </li>
+             
+              <li><a href="userlogin.html" class="nav-link">Login</a> </li>
+              <li> <a href="usersignup.html" class="nav-link">Sign Up</a> </li>
+
+            </ul>
+    
+            <div class="menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+
+          </nav>
+        </div>
+      </header>
+
+      <script>
+    const menu = document.querySelector('.menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menu.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      menu.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      menu.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+<!-- Navbar End -->
+<!-- Home Start -->
+      <section class="home" id="home">
+        <div class="head_container">
+          <div class="box">
+            <div class="text">
+              <h2>Do not just dream of a vacation. Just do it!</h2>
+              <p>We cherish the bond we share with you and are pleased to bring in an exclusive offer to celebrate our togetherness. Our valued NeuPass Members can now book stays at special savings with this offer across our hotels worldwide.</P>
+                <button><a href="#about">MORE INFO</a></button>
+            </div>
+          </div>
+          <div class="image">
+            <img src="Images/bg2.jpg" class="slide">
+          </div>
+          <div class="image_item">
+            <img src="Images/bg2.jpg" alt="" class="slide active" onclick="img('Images/bg2.jpg')">
+            <img src="Images/home2.jpg" alt="" class="slide" onclick="img('Images/home2.jpg')">
+            <img src="Images/2.jpg" alt="" class="slide" onclick="img('Images/2.jpg')">
+            <img src="Images/gallery-img-2.webp" alt="" class="slide" onclick="img('Images/gallery-img-2.webp')">
+          </div>
+        </div>
+      </section>
+      <script>
+        function img(anything) {
+          document.querySelector('.slide').src = anything;
+        }
+    
+        function change(change) {
+          const line = document.querySelector('.image');
+          line.style.background = change;
+        }
+      </script>
+      <section class="book">
+        <div class="container flex">
+          <div class="input grid">
+            <div class="box">
+              <label>Check-in:</label>
+              <input type="date" placeholder="Check-in-Date">
+            </div>
+            <div class="box">
+              <label>Check-out:</label>
+              <input type="date" placeholder="Check-out-Date">
+            </div>
+            <div class="box">
+              <label>Adults:</label> <br>
+              <input type="number" placeholder min="0">
+            </div>
+            <div class="box">
+              <label>Children:</label> <br>
+              <input type="number" placeholder min="0">
+            </div>
+          </div>
+          <div class="search">
+            <input type="submit" value="SEARCH">
+          </div>
+        </div>
+      </section>
+      <!-- Home End -->
+      <!-- About Start -->
+      <section class="about top" id="about">
+        <div class="container flex">
+          <div class="left">
+            <div class="img">
+              <img src="Images/Frontline Future.jpg" alt="" class="image1">
+              <img src="Images/room1.jpeg" alt="" class="image2">
+            </div>
+          </div>
+          <div class="right">
+            <div class="heading">
+              <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+              <h2>Welcome To Our Hotel </h2>
+              <p>
+                Whether you are travelling on business or pleasure, we know you have a variety of hotels to choose from. We strive to provide you with a room that is clean and comfortable, with friendly attentive service at a value-conscious price</p>
+              <button class="btn1"><a href="addmore.html">READ MORE</a></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About End -->
+      <!-- Wrapper Start -->
+      <section class="wrapper top">
+        <div class="container">
+          <div class="text">
+            <h2>Our Facilities</h2>
+            <p>Whether you are travelling on business or pleasure, we know you have a variety of hotels to choose from. We strive to provide you with a room that is clean and comfortable, with friendly attentive service at a value-conscious price </p>
+
+            <div class="content">
+              <div class="box flex">
+                <span>Swimming pool</span>
+              </div>
+              <div class="box flex">
+                <span>Gym & yogo</span>
+              </div>
+              <div class="box flex">
+                <span>Spa & massage</span>
+              </div>
+              <div class="box flex">
+                <span>Boat Tours</span>
+              </div>
+              <div class="box flex">
+                <span>Surfing Lessons</span>
+              </div>
+              <div class="box flex">
+                <span>Conference room</span>
+              </div>
+              <div class="box flex">
+                <span>Diving & smorking</span>
+              </div>
+              <div class="box flex">
+                <span>Private Beach</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Wrapper End -->
+      <!-- Room Start -->
+      <section class="room top" id="room">
+        <div class="container">
+          <div class="heading_top flex1">
+            <div class="heading">
+              <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+              <h2>Our Rooms</h2>
+            </div>
+            <div class="button">
+              <button class="btn1"><a href="./ourroom.jsp" class="href">VIEW ALL</a></button>
+            </div>
+          </div>    
+          <div class="content grid">
+            <div class="box">
+              <div class="img">
+                <img src="Images/room1.jpeg" alt="">
+              </div>
+              <div class="text">
+                <h3>Super Deluxe Rooms</h3>
+                <p> <span>RS</span>2000 <span>/per night</span> </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img">
+                <img src="Images/room2.jpg" alt="">
+              </div>
+              <div class="text">
+                <h3>Deluxe Rooms</h3>
+                <p> <span>RS</span>2500<span>/per night</span> </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img">
+                <img src="Images/room3.jpg" alt="">
+              </div>
+              <div class="text">
+                <h3> Single Rooms</h3>
+                <p> <span>RS</span>1200<span>/per night</span> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!-- Room End  -->
+        <!-- Resturant Start -->
+      <section class="restaurant top" id="restaurant">
+        <div class="container flex">
+          <div class="left">
+            <img src="Images/hotel-restaurants-001.webp" alt="">
+          </div>
+          <div class="right">
+            <div class="text">
+              <h2>Our Restaurant</h2>
+          
+            <div class="accordionWrapper">
+              <div class="accordionItem open">
+                <h2 class="accordionIHeading">Indian Kitchen</h2>
+                <div class="accordionItemContent">
+                 <p>India is a big country with many states and regions. Each region   offers a unique assortment of dishes and cooking techniques.
+                  The staple Indian foods are Rice, Wheat and Lentils. And no Indian dish is complete without spices. Indian food is a combination
+                   of all six tastes like sweet, sour, salty, bitter, spicy and astringent.
+                 </p></div>
+              </div>
+              <div class="accordionItem open">
+                <h2 class="accordionIHeading">Chinese Kitchen</h2>
+                <div class="accordionItemContent">
+                  <p>No need to go Indian Chinese restaurant anymore! All you favorite indo-chinese recipes are right here,
+                     including soups (like veg hot and sour soup), noodles (like hakka noodles), fried rice (like veg fried rice) 
+                     and starters (like chilli paneer, veg manchurian).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Resturant End -->
+<!-- Gallery Start -->
+<section class="gallary mtop " id="gallary">
+  <div class="container">
+    <div class="heading_top flex1">
+      <div class="heading">
+        <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+        <h2>Photo Gallery of Our Hotel</h2>
+      </div>
+      <div class="button">
+        <button class="btn1"><a href="Images/gallery.jsp">VIEW GALLERY</a></button>
+      </div>
+    </div>
+   
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/gallery1.jpg" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/about-img-1.jpg" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/about-img-2.jpg" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/about-img-3.jpg" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/room1.jpeg" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/room2.jpg" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/room3.jpg" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/gallery-img-1.jpg" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/gallery-img-2.webp" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/gallery-img-3.webp" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/gallery-img-4.webp" alt="">
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="Images/gallery-img-5.webp" alt="">
+      </div>
+    </div>
+    
+    </div>
+
+</section>
+    <!-- Gallery End -->
+    <!-- Map Start -->
+      
+
+    <section class="map top">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15008.599285914404!2d75.3588411!3d19.8758946!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb98159f206975%3A0x38405bac1ce1bafa!2sWelcomhotel%20By%20ITC%20Hotels%2C%20Rama%20International%2C%20Aurangabad-Premium%20business%20%26%20leisure%20hotel%7C%20Near%20Ajanta%20Ellora%20Caves!5e0!3m2!1sen!2sin!4v1684096736970!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        
+    </section>
+    <!-- Map End -->
+    <!-- Footer Start -->
+    
+      <footer>
+        <div class="container grid top">
+          <div class="box">
+            <img src="./card1.png"><p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+            <p>Accepted payment methods</p>
+            <div class="payment grid">
+              <img src="https://img.icons8.com/color/48/000000/visa.png" />
+              <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+              <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+              <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+            </div>
+          </div>
+    
+          <div class="box">
+            <h3>Recent News</h3>
+    
+            <ul>
+            
+              <li>Chill and Escape in Our Natural Shelters</li>
+              <li>Vacation In Our Hotel</li>
+              <li>Live Music Concerts In Our Hotel</li>
+            </ul>
+          </div>
+    
+          <div class="box">
+            <h3>For Customers</h3>
+            <ul>
+              <li><a href="#about">About Our Hotel</a></li>
+              <li><a href="./contact.jsp">Customer Care/Help</a></li>
+              <li><a href="#room">Our Rooms</a></li>
+            </ul>
+          </div>
+    
+          <div class="box">
+            <h3>Contact Us</h3>
+    
+            <ul>
+              <li>ourhotel@gmail.com </li>
+              <li>000 886 7777 </li>
+              <li>555 999 7000 </li>
+              <li>24/ 7 Customer Services </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      
+      <!-- Footer End-->
+    </body>
+    
+    </html>
+</html>
